@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+  "title": "Главная страница"
+})
+<body>
+  @@include('html/header.html', {})
+  <main>
+    <!-- Главнаый экран -->
+    <div class="main-bg">
+      <picture>
+        <source srcset="./images/home/main-bg_1.avif" type="image/avif">
+        <source srcset="./images/home/main-bg_1.webp" type="image/webp">
+        <img class="main-bg_photo" src="./images/home/main-bg_1.png" alt="logo">
+      </picture>
+      <div class="main-bg_info">
+        <h2 class="main-bg_title">Шиномонтаж и доставка<br>бесплатно</h2>
+        <button class="main-bg_button">Подробнее</button>
+      </div>
+    </div>
+    <!-- Подбор запчастей -->
+    <section class="search-spares spares">
+      <div class="container">
+        <div class="spares_block">
+          <span class="search-spares_title">Подберём <span class="search-spares_title__orange">шины</span> или <span class="search-spares_title__blue">диски</span> по <span class="search-spares_title__orange">марке автомобиля</span> или <span class="search-spares_title__blue">параметрам товара</span></span>
+          <div class="spares_form" id="spares">
+            <select class="producer active" data-btn="1">
+                <option value="">Производитель</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <select class="model" data-btn="2">
+                <option value="">Модель</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <select class="generation" data-btn="3">
+                <option value="">Поколение</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <select class="modification" data-btn="4">
+                <option value="">Модификация</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <select class="body" data-btn="5">
+                <option value="">Кузов</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+          </div>
+          <button class="button spares_btn">Подобрать</button>
+        </div>
+      </div>
+    </section>
+    <!-- Популярные услуги -->
+    <section class="services">
+      <div class="container">
+        <h2 class="title">Популярные услуги</h2>
+        <div class="services_block">
+          <div class="services_item">
+            <div class="services_item-photo">
+              <picture>
+                <source srcset="./images/services/item_1.avif" type="image/avif">
+                <source srcset="./images/services/item_1.webp" type="image/webp">
+                <img src="./images/services/item_1.png" alt="item_1">
+              </picture>
+            </div>
+            <div class="services_item-info">
+              <h4 class="services_item-info-title">Шиномонтаж</h4>
+              <span class="services_item-info-description">Ежедневно с 9:00 до 21:00, без перерывов</span>
+              <span class="services_item-info-price">от 500 ₽</span>
+            </div>
+          </div>
+          <div class="services_item">
+            <div class="services_item-photo">
+              <picture>
+                <source srcset="./images/services/item_2.avif" type="image/avif">
+                <source srcset="./images/services/item_2.webp" type="image/webp">
+                <img src="./images/services/item_2.png" alt="item_2">
+              </picture>
+            </div>
+            <div class="services_item-info">
+              <h4 class="services_item-info-title">Ремонт и правка дисков</h4>
+              <span class="services_item-info-description">Ежедневно с 9:00 до 21:00, без перерывов</span>
+              <span class="services_item-info-price">от 800 ₽</span>
+            </div>
+          </div>
+          <div class="services_item">
+            <div class="services_item-photo">
+              <picture>
+                <source srcset="./images/services/item_3.avif" type="image/avif">
+                <source srcset="./images/services/item_3.webp" type="image/webp">
+                <img src="./images/services/item_3.png" alt="item_3">
+              </picture>
+            </div>
+            <div class="services_item-info">
+              <h4 class="services_item-info-title">Сезонное хранение шин</h4>
+              <span class="services_item-info-description">Ежедневно с 9:00 до 21:00, без перерывов</span>
+              <span class="services_item-info-price">Бесплатно</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="button services_btn">Посмотреть все шины</button>
+    </section>
+    <!-- Популярные шины -->
+    <section class="popular-tires tires">
+      <div class="container">
+        <h2 class="title tires__title">Популярные шины</h2>
+        <div class="tires__wrapper-tabs" id="tires-tab">
+          <div class="tires__tab" data-btn="1">Автомобильные</div>
+          <div class="tires__tab" data-btn="2">Грузовые</div>
+          <div class="tires__tab" data-btn="3">Мотошины</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('html/footer.html', {})
+  @@include('html/script.html', {})
+</body>
+</html>

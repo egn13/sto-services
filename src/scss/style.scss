@@ -1,0 +1,43 @@
+/* СТИЛИ */
+@import './config/normolize';
+@import './config/reset.local';
+
+/* ПОДКЛЮЧЕНИЕ ГЛОБАЛЬНЫХ ШРИФТОВ */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); */
+
+/* ПОДКЛЮЧЕНИЕ ЛОКАЛЬНЫХ ШРИФТОВ */
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('../fonts/IBMPlexSans-Medium.woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('../fonts/IBMPlexSans-Regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ПЕРЕМЕННЫЕ */
+@import './config/vars';
+
+/* ИМПОРТ БЛОКОВ */
+@import './layout/header';
+@import './blocks/button';
+@import './blocks/mainHome';
+
+.container {
+  width: 1224px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  font-weight: 500;
+  color: $black;
+}
